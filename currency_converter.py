@@ -1,9 +1,10 @@
 from requests import get
 from pprint import PrettyPrinter
 import json
+from decouple import config
 
-BASE_URL = "https://free.currconv.com/"
-API_KEY = "4cf1e14d0b34f876e924"
+BASE_URL = config("BASE_URL")
+API_KEY = config("API_KEY")
 
 # prints data in a more human-readable format
 printer = PrettyPrinter()
